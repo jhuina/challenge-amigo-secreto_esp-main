@@ -61,8 +61,4 @@ function sortearAmigo(){
 
     //console.log(amigoSeleccionado);
     //console.log(amigoAleatorio);
->>>>>>> desarrollo
-}
-=======
-}
->>>>>>> desarrollo
+    
