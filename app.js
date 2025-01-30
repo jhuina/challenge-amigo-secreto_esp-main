@@ -1,5 +1,8 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+<<<<<<< HEAD
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+=======
+>>>>>>> desarrollo
 let amigos = [];
 let amigoAleatorio = Math.floor(Math.random()*amigos);
 function asignarTextoElemento(elemento, texto) {
@@ -43,4 +46,8 @@ function CrearLi(nombre){
 
 function sortearAmigo(){
     console.log(amigoAleatorio);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> desarrollo

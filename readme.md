@@ -2,8 +2,11 @@
 
 `Inicio del proyecto`
 
+<<<<<<< HEAD
 `Inicio del proyecto`
 
+=======
+>>>>>>> desarrollo
 `Se llama los datos ingresados en el input atravez de un identificador id `
 
 `Se deja registrados los datos en un array`
