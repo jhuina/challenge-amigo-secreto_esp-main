@@ -1,6 +1,5 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigos = [];
-let amigoAleatorio = Math.floor(Math.random()*amigos);
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
@@ -8,7 +7,18 @@ function asignarTextoElemento(elemento, texto) {
 }
 function agregarAmigo() {
     // se crea una variable para el texto ingresado por el input 
-    let textoIngresado = document.getElementById('amigo').value;   
+    let textoIngresado = document.getElementById('amigo').value.trim();
+    // validar caracteres especiales
+    if(textoIngresado.match(/[!@#$%^&*(),.?":{}|<>]/)){
+        alert('El nombre no puede contener carracteres especiales');
+        LimpiarNombre();
+        return(false);
+    }   
+    if(textoIngresado.match(/\d/)){
+        alert('El nombre no puede contener Numeros');
+        LimpiarNombre();
+        return(false);
+    } 
     if(textoIngresado === ''){
         //el usuario dejo vacio el input
         alert('Por favor, inserte un nombre.');
@@ -24,7 +34,6 @@ function agregarAmigo() {
         }
     }
     LimpiarNombre();
-    return;
 }
 function LimpiarNombre(){
     let valorInput = nombreEscrito = document.querySelector('#amigo');
@@ -39,7 +48,17 @@ function CrearLi(nombre){
         document.querySelector('#listaAmigos').appendChild(nuevoLi);
     }
 }
-
+// funcion para realizar el sorteo
 function sortearAmigo(){
-    console.log(amigoAleatorio);
+    
+    if (amigos == 0 ){
+        alert('No hay Nombres ingresado, no se puede realizar el sorteo');
+    }
+    let amigoAleatorio = Math.floor(Math.random()*amigos.length);
+    let amigoSeleccionado = amigos[amigoAleatorio];
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<li>El amigo secreto es : ${amigoSeleccionado}</li>`;
+
+    //console.log(amigoSeleccionado);
+    //console.log(amigoAleatorio);
 }
